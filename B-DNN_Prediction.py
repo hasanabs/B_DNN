@@ -123,6 +123,6 @@ plt.title('Nt='+str(Nt)+' Np='+str(Np)+' Nr='+str(Nr)+' M='+str(M)+' Ns='+str(Ns
 bbox_props = dict(boxstyle="round,pad=0.3", fc="white", ec="white", lw=1)
 plt.text(1, 0.6, "Time complexity= "+str(round(predict_stop,2))+" seconds", verticalalignment="bottom", rotation=0, size=8, bbox=bbox_props)
 plt.show()   
-if not os.path.exists('../results'): os.makedirs('../results')
-plt.savefig('../results/B-DNN_Nt.'+str(Nt)+'_Np.'+str(Np)+'_Nr.'+str(Nr)+'_M.'+str(M)+'_Ns.'+str(Ns)+'.png')
+if not os.path.exists('results'): os.makedirs('results')
+plt.savefig('results/B-DNN_Nt.'+str(Nt)+'_Np.'+str(Np)+'_Nr.'+str(Nr)+'_M.'+str(M)+'_Ns.'+str(Ns)+'.png')
 print ("Time Complexity: ", predict_stop, "seconds.")

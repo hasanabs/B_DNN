@@ -22,4 +22,5 @@ Some trained parameter are available for this template that is:
 
 It would be highly appreciated if you cite the following reference for your work:
 - [1] H. Albinsaid, K. Singh, S. Biswas, C. -P. Li and M. -S. Alouini, "Block Deep Neural Network-Based Signal Detector for Generalized Spatial Modulation," in IEEE Communications Letters, vol. 24, no. 12, pp. 2775-2779, Dec. 2020, doi: [10.1109/LCOMM.2020.3015810](https://ieeexplore.ieee.org/document/9165095).
+- Link from arxiv ([here](https://arxiv.org/abs/2008.03612)).
 
