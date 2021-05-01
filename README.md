@@ -4,8 +4,8 @@ This is a simulation program of Generalized Spatial Modulation (GSM) detector us
 Comparing with the conventional methods, the proposed method has better performance of BER. Also, since this method based on DNN that can easily parallelize due to the availability of computation equipment, so the time complexity of the proposed method is also reliable.
 
 This compute capsule uses:
-- [Python 3.7](https://www.python.org/downloads/release/python-370/)
-- [TensorFlow 2](https://www.tensorflow.org/)
+- [Python 3.9](https://www.python.org/downloads/release/python-390/)
+- [TensorFlow 2.4](https://www.tensorflow.org/)
 - [Matplotlib](https://matplotlib.org/)
 
 ## Quick Start Guide

@@ -62,7 +62,6 @@ def modulation(M):
 
 def decoder_symbol(In_node, Out_node, Hiden_node, Np): #out node for ant & sym; Hiden node for ant & sym;
     outputs=[]
-    loss = []; matriks=[]
     input_antenna = keras.Input(shape=(In_node,))
     x=[]
     for active in range(Np):
@@ -73,9 +72,10 @@ def decoder_symbol(In_node, Out_node, Hiden_node, Np): #out node for ant & sym; 
             x[active-1][int(i)]=Dense(Hiden_node[i], kernel_regularizer=keras.regularizers.l2(l=0.001), activation='relu')(x[active-1][i-1])
             x[active-1][int(i)]=BatchNormalization()(x[active-1][int(i)])
         outputs.append(Dense(Out_node, kernel_regularizer=keras.regularizers.l2(l=0.001), activation='softmax', name='Symbol_'+str(active+1))(x[active-1][Hiden_node.shape[0]-1]))
-        loss.append('sparse_categorical_crossentropy'); matriks.append('accuracy')
     model = keras.Model(inputs=input_antenna, outputs=outputs, name='model')
-    model.compile(SGD(lr=0.005,nesterov=True), loss=loss, metrics=matriks)
+    loss = keras.losses.SparseCategoricalCrossentropy()
+    matriks = keras.metrics.SparseCategoricalAccuracy("accuracy")
+    model.compile(SGD(lr=0.005,nesterov=True), loss=loss, metrics= matriks)
     # model.summary()
     return model
 
